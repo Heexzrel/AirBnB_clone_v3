@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """app.py"""
-from models import storage
 from api.v1.views import app_views
 from werkzeug.exceptions import HTTPException
 from flask import Flask
 from os import getenv
 from flask import jsonify
 from flask_cors import CORS
+from models import storage
 
 app = Flask(__name__)
 CORS(app, resources={"/*": {"origins": '0.0.0.0'}})
